@@ -17,6 +17,7 @@ import { RioSampleApp } from './containers/sample-app';
 import { SessionActions } from './actions/session';
 import { CounterActions } from './actions/counter';
 import { AUTH_PROVIDERS } from './services/auth/';
+import { QUOTE_PROVIDERS } from './components/quoteComponent/quote.service';
 import { SERVER_PROVIDERS } from './services/server/';
 
 const store = configureStore({});
@@ -36,5 +37,6 @@ bootstrap(RioSampleApp, [
   SERVER_PROVIDERS,
   HTTP_PROVIDERS,
   ROUTER_PROVIDERS,
+  QUOTE_PROVIDERS,
   provide(APP_BASE_HREF, { useValue: '/' })
 ]);

@@ -5,12 +5,12 @@ import { NgRedux } from 'ng2-redux';
 import { Observable } from 'rxjs/Observable';
 
 import { CounterActions } from '../actions/counter';
-import { RioContainer, RioCounter } from '../components';
+import { RioContainer, RioCounter, QuoteComponent } from '../components';
 import { IAppState } from '../store/app-state';
 
 @Component({
   selector: 'counter-page',
-  directives: [RioContainer, RioCounter],
+  directives: [RioContainer, RioCounter, QuoteComponent],
   pipes: [AsyncPipe],
   template: `
     <rio-container [size]=2 [center]=true>
@@ -18,7 +18,7 @@ import { IAppState } from '../store/app-state';
         class="center caps">
         Counter
       </h2>
-
+      <my-quote> </my-quote>
       <rio-counter
         [counter]="counter$ | async"
         [increment]="increment"
